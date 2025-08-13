@@ -112,3 +112,8 @@ module "cosmos-account-module" {
   cosmos_accounts = var.cosmos_accounts-main
   
 }
+module "AKS" {
+  depends_on = [ module.module-rg ]
+  source = "../../modules/AKS"
+  aks_clusters = var.aks_clusters-main
+}

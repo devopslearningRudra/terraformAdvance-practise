@@ -349,3 +349,24 @@ cosmos_accounts-main = {
     
   }
 }
+
+#For AKS Cluster 
+aks_clusters-main = {
+  prod-aks = {
+    location       = "France Central"
+    resource_group = "prod-rg"
+    dns_prefix     = "prodaksdns"
+    node_count     = 1
+    vm_size        = "Standard_D2_v2"
+    environment    = "Production"
+  }
+
+  dev-aks = {
+    location       = "East US"
+    resource_group = "dev-rg"
+    dns_prefix     = "devaksdns"
+    node_count     = 2
+    vm_size        = "Standard_D2_v2"
+    environment    = "Development"
+  }
+}

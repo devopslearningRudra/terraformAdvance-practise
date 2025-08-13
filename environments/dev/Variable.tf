@@ -293,3 +293,15 @@ variable "cosmos_accounts-main" {
     consistency_level=string
   }))
 }
+## For Azure Kubernetes Services
+variable "aks_clusters-main"{
+  description = "Map of AKS cluster definitions"
+  type = map(object({
+    location       = string
+    resource_group = string
+    dns_prefix     = string
+    node_count     = number
+    vm_size        = string
+    environment    = string
+  }))
+}
